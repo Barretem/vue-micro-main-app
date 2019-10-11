@@ -1,25 +1,18 @@
 {
-  "name": "vue-micro-main-app",
+  "name": "app1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run dev:main\" \"npm run dev:app1\" \"npm run dev:app2\"",
-    "dev:main": "vue-cli-service serve",
-    "dev:app1": "cd app1 && yarn dev",
-    "dev:app2": "cd app2 && yarn dev",
-    "install:all": "npm run install:main && npm run install:app1 && npm run install:app2",
-    "install:main": "yarn",
-    "install:app1": "cd app1 && yarn",
-    "install:app2": "cd app2 && yarn",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "postinstall": "node postinstall.js"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "concurrently": "^5.0.0",
     "core-js": "^2.6.5",
-    "qiankun": "^1.2.0",
-    "vue": "^2.6.10"
+    "single-spa-vue": "^1.5.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.0",
@@ -34,6 +27,7 @@
     "less-loader": "^5.0.0",
     "lint-staged": "^8.1.5",
     "prettier": "^1.18.2",
+    "vue-cli-plugin-single-spa": "^1.0.0",
     "vue-template-compiler": "^2.6.10"
   },
   "gitHooks": {
